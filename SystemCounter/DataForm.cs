@@ -190,9 +190,17 @@ namespace SystemCounter
             
         }
 
+        int id = 0;
         private void btnNext_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Next item is pressed!");
+        {        
+            string deviceStr = "Device " + id;
+            string idStr = "377030" + id;
+            string[] data = { deviceStr, idStr};
+            ListViewItem itm;
+            itm = new ListViewItem(data);
+            listView1.Items.Add(itm);
+            id++;
+
             /*
             int nID = listBox.SelectedIndex;
             nID++;
@@ -338,6 +346,11 @@ namespace SystemCounter
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             Form1.instance.update_chart();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
