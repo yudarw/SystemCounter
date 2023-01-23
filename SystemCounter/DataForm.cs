@@ -192,7 +192,7 @@ namespace SystemCounter
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Next item is pressed!");
+            //MessageBox.Show("Next item is pressed!");
             /*
             int nID = listBox.SelectedIndex;
             nID++;
